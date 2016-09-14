@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - UI/IntroCanvas
+  - GameUI
+  - Button/Host
+  - Button/Join
+  - NetworkManager
   layers:
   - Default
   - TransparentFX
