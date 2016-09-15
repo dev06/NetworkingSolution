@@ -19,6 +19,7 @@ public class Button : ButtonEventHandler {
 		{
 			//SEND MESSAGE
 			NetworkMessageSender.Send("Hello!");
+			Debug.Log("Message Sent!");
 		}
 	}
 }

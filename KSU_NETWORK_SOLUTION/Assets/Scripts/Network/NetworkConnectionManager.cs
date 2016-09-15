@@ -7,7 +7,7 @@ public class NetworkConnectionManager : NetworkManager {
 
 	public static bool IsServer;
 	public static bool IsClientConnected;
-
+	public NetworkClient Client;
 	public void StartGameServer()
 	{
 		Debug.Log("Server Started...");
@@ -28,6 +28,9 @@ public class NetworkConnectionManager : NetworkManager {
 		yield return new WaitForSeconds(1);
 		networkAddress = "127.0.0.1";
 		StartClient();
+		Client = client;
+		Debug.LogError("Client -> " + client);
+
 	}
 
 	public override void OnServerConnect(NetworkConnection conn)

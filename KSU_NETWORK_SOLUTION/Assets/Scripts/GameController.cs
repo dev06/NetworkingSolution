@@ -7,7 +7,6 @@ public class GameController : MonoBehaviour
 
 	public NetworkConnectionManager networkConnectionManager;
 
-
 	void Awake()
 	{
 		if (Instance != null)
@@ -22,6 +21,7 @@ public class GameController : MonoBehaviour
 	private void Init()
 	{
 		networkConnectionManager = GameObject.FindWithTag("NetworkManager/NetworkConnectionManager").GetComponent<NetworkConnectionManager>();
+
 	}
 }
 
