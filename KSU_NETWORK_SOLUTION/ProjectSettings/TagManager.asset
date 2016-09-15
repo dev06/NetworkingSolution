@@ -9,6 +9,8 @@ TagManager:
   - Button/Host
   - Button/Join
   - NetworkManager
+  - NetworkManager/NetworkConnectionManager
+  - UI/GameCanvas
   layers:
   - Default
   - TransparentFX

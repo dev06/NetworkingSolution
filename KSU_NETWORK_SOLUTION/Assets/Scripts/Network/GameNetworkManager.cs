@@ -1,23 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
-public class GameNetworkManager : NetworkManager   {
 
-	void Start ()
+public class GameNetworkManager : MonoBehaviour {
+
+	public static GameNetworkManager Instance;
+	void Awake()
 	{
-		StartServer();
+		if (Instance != null)
+		{
+			Destroy(gameObject);
+		} else {
+			DontDestroyOnLoad(gameObject);
+		}
 	}
-
-	void Update ()
-	{
-
-	}
-
-	public void OnClientConnect(NetworkConnection conn)
-	{
-		Debug.Log(conn);
-	}
-
-
 
 }

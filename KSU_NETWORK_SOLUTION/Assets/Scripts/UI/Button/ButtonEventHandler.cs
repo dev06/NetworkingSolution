@@ -4,9 +4,10 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class ButtonEventHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler {
 
+	public GameController gameController;
 	public Color HoverColor;
 	public Color RestColor;
-
+	public ButtonID buttonID;
 
 	protected Image _image;
 
@@ -14,9 +15,10 @@ public class ButtonEventHandler : MonoBehaviour, IPointerEnterHandler, IPointerE
 		Init();
 	}
 
-	void Init()
+	protected void Init()
 	{
 		_image = GetComponent<Image>();
+		gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 	}
 
 	void Update () {

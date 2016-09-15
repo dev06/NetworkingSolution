@@ -85,6 +85,100 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &339906302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 339906303}
+  - 114: {fileID: 339906304}
+  m_Layer: 0
+  m_Name: NetworkConnectionManager
+  m_TagString: NetworkManager/NetworkConnectionManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &339906303
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339906302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 600241665}
+  m_RootOrder: 0
+--- !u!114 &339906304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 339906302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391d00cb1f2a65b4eb391cdcdb9ac597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NetworkPort: 7777
+  m_ServerBindToIP: 0
+  m_ServerBindAddress: 
+  m_NetworkAddress: localhost
+  m_DontDestroyOnLoad: 1
+  m_RunInBackground: 1
+  m_ScriptCRCCheck: 1
+  m_MaxDelay: 0.01
+  m_LogLevel: 2
+  m_PlayerPrefab: {fileID: 0}
+  m_AutoCreatePlayer: 1
+  m_PlayerSpawnMethod: 0
+  m_OfflineScene: 
+  m_OnlineScene: 
+  m_SpawnPrefabs: []
+  m_CustomConfig: 0
+  m_MaxConnections: 4
+  m_ConnectionConfig:
+    m_PacketSize: 1500
+    m_FragmentSize: 500
+    m_ResendTimeout: 1200
+    m_DisconnectTimeout: 2000
+    m_ConnectTimeout: 2000
+    m_MinUpdateTimeout: 10
+    m_PingTimeout: 500
+    m_ReducedPingTimeout: 100
+    m_AllCostTimeout: 20
+    m_NetworkDropThreshold: 5
+    m_OverflowDropThreshold: 5
+    m_MaxConnectionAttempt: 10
+    m_AckDelay: 33
+    m_MaxCombinedReliableMessageSize: 100
+    m_MaxCombinedReliableMessageCount: 10
+    m_MaxSentMessageQueueSize: 128
+    m_IsAcksLong: 0
+    m_UsePlatformSpecificProtocols: 0
+    m_Channels: []
+  m_GlobalConfig:
+    m_ThreadAwakeTimeout: 1
+    m_ReactorModel: 0
+    m_ReactorMaximumReceivedMessages: 1024
+    m_ReactorMaximumSentMessages: 1024
+    m_MaxPacketSize: 2000
+  m_Channels: 
+  m_UseWebSockets: 0
+  m_UseSimulator: 0
+  m_SimulatedLatency: 1
+  m_PacketLossPercentage: 0
+  m_MatchHost: mm.unet.unity3d.com
+  m_MatchPort: 443
+  isNetworkActive: 0
+  matchMaker: {fileID: 0}
+  matchName: default
+  matchSize: 4
 --- !u!1 &481528655
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,10 +209,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 694511764}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 90}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481528657
 MonoBehaviour:
@@ -143,14 +237,14 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 80
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 2
+    m_BestFit: 1
+    m_MinSize: 18
     m_MaxSize: 80
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Host
 --- !u!222 &481528658
@@ -183,7 +277,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 600241663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 404548d9edb07d94896054f17bbb91a3, type: 3}
+  m_Script: {fileID: 11500000, guid: d274ae74bf3e9ef4a8522d16d67c00b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &600241665
@@ -196,7 +290,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 339906303}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1 &694511763
@@ -233,8 +328,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchoredPosition: {x: -450, y: 0}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694511765
 MonoBehaviour:
@@ -277,11 +372,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 694511763}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f95d2e93ce6bde4f9dfdda9bed9e23b, type: 3}
+  m_Script: {fileID: 11500000, guid: f8cfc71362e92ac47857acf395068450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoverColor: {r: 0.3897059, g: 1, b: 0.9242394, a: 1}
+  gameController: {fileID: 0}
+  HoverColor: {r: 0.6014437, g: 0.97794116, b: 0.45301688, a: 1}
   RestColor: {r: 1, g: 1, b: 1, a: 1}
+  buttonID: 0
 --- !u!1 &829192048
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +387,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 829192049}
+  - 114: {fileID: 829192050}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -310,6 +408,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &829192050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 829192048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868706b3cb4d69d4db4443ba9cb588cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  networkConnectionManager: {fileID: 0}
 --- !u!1 &961750006
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,8 +876,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -169}
-  m_SizeDelta: {x: 450, y: 60}
+  m_AnchoredPosition: {x: 450, y: 100}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606245339
 MonoBehaviour:
@@ -851,7 +961,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -966,10 +1076,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2041858118}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 90}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714793641
 MonoBehaviour:
@@ -994,14 +1104,14 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 80
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 80
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
-    m_VerticalOverflow: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Join
 --- !u!222 &1714793642
@@ -1044,8 +1154,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -319}
-  m_SizeDelta: {x: 300, y: 100}
+  m_AnchoredPosition: {x: 450, y: 0}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041858119
 MonoBehaviour:
@@ -1088,8 +1198,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2041858117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f95d2e93ce6bde4f9dfdda9bed9e23b, type: 3}
+  m_Script: {fileID: 11500000, guid: f8cfc71362e92ac47857acf395068450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HoverColor: {r: 0.3897059, g: 1, b: 0.9242394, a: 1}
+  gameController: {fileID: 0}
+  HoverColor: {r: 0.6014437, g: 0.97794116, b: 0.45301688, a: 1}
   RestColor: {r: 1, g: 1, b: 1, a: 1}
+  buttonID: 1
