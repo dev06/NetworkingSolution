@@ -16,6 +16,7 @@ TagManager:
   - Info/Status
   - Info/IP
   - Info/TextMessage
+  - Info/Connections
   layers:
   - Default
   - TransparentFX

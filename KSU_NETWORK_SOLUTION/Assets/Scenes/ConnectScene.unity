@@ -379,48 +379,6 @@ MonoBehaviour:
   HoverColor: {r: 0.6014437, g: 0.97794116, b: 0.45301688, a: 1}
   RestColor: {r: 1, g: 1, b: 1, a: 1}
   buttonID: 0
---- !u!1001 &816180705
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 443864, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 460.26276
-      objectReference: {fileID: 0}
-    - target: {fileID: 443864, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 269.72852
-      objectReference: {fileID: 0}
-    - target: {fileID: 443864, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 443864, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 443864, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 443864, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 443864, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 443864, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: fa7432c548068e24ba69e081159133fd, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &829192048
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,10 +437,10 @@ MonoBehaviour:
   m_BroadcastKey: 2222
   m_BroadcastVersion: 1
   m_BroadcastSubVersion: 1
-  m_BroadcastInterval: 1000
+  m_BroadcastInterval: 3000
   m_UseNetworkManager: 1
   m_BroadcastData: popopop
-  m_ShowGUI: 1
+  m_ShowGUI: 0
   m_OffsetX: 0
   m_OffsetY: 0
 --- !u!1 &961750006

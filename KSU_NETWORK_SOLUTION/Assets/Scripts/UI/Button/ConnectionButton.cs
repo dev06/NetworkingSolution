@@ -24,7 +24,6 @@ public class ConnectionButton : ButtonEventHandler {
 		{
 
 			gameController.overridenNetworkDiscovery.StartGameClient();
-			//gameController.networkConnectionManager.ConnectClientToServer("");
 		}
 	}
 }

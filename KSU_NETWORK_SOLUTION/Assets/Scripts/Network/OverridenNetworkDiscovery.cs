@@ -25,13 +25,18 @@ public class OverridenNetworkDiscovery : NetworkDiscovery {
 
 	public override void OnReceivedBroadcast (string fromAddress, string data)
 	{
-		base.OnReceivedBroadcast(fromAddress, data);
 		NetworkConnectionManager.HostIPAddress = fromAddress;
 		Debug.Log("BroadCast Recieved -> " + fromAddress + " " + data);
 		if (_gameController.networkConnectionManager != null)
 		{
-			_gameController.networkConnectionManager.ConnectClientToServer(fromAddress);
-
+			if (NetworkConnectionManager.IsClientConnected ==  false)
+			{
+				if (NetworkConnectionManager.IsConnecting == false)
+				{
+					_gameController.networkConnectionManager.ConnectClientToServer(fromAddress);
+					NetworkConnectionManager.IsConnecting = true;
+				}
+			}
 			StartCoroutine("StopListeningToBroadCast");
 		}
 	}

@@ -44,6 +44,10 @@ public class NetworkMessageReceiver : NetworkManager {
 	{
 		var msg = netMsg.ReadMessage <StringMessage>();
 		GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
+		if (NetworkConnectionManager.IsServer)
+		{
+			NetworkMessageSender.Send(msg.value, netMsg.conn.connectionId);
+		}
 	}
 
 	private void ReceiveBoolMessage(NetworkMessage netMsg)

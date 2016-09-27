@@ -42,6 +42,8 @@ public class NetworkMessageSender: NetworkManager
 		{
 			NetworkConnectionManager.Client.Send(MessageType.String_CHN, msg);
 		}
+
+		Debug.LogError("Message Sent");
 	}
 
 	public static void Send(bool boolValue)
@@ -57,7 +59,21 @@ public class NetworkMessageSender: NetworkManager
 		}
 	}
 
+	public static void Send(string stringValue, int execption)
+	{
+		StringMessage msg = new StringMessage();
+		msg.value = stringValue;
+		foreach (NetworkConnection n in NetworkServer.connections)
+		{
+			if (n == null || n.connectionId == execption)
+			{
+				continue;
+			}
 
+			NetworkServer.SendToClient(n.connectionId, MessageType.String_CHN, msg);
+
+		}
+	}
 
 }
 

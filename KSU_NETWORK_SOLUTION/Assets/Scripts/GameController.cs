@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour
 		Init();
 	}
 
+
 	private void Init()
 	{
 		networkConnectionManager = GameObject.FindWithTag("NetworkManager/NetworkConnectionManager").GetComponent<NetworkConnectionManager>();
