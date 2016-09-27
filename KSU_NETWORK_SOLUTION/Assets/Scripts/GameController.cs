@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 	public static GameController Instance;
 
 	public NetworkConnectionManager networkConnectionManager;
+	public OverridenNetworkDiscovery overridenNetworkDiscovery;
 
 	void Awake()
 	{
@@ -21,7 +22,7 @@ public class GameController : MonoBehaviour
 	private void Init()
 	{
 		networkConnectionManager = GameObject.FindWithTag("NetworkManager/NetworkConnectionManager").GetComponent<NetworkConnectionManager>();
-
+		overridenNetworkDiscovery = GetComponent<OverridenNetworkDiscovery>();
 	}
 }
 

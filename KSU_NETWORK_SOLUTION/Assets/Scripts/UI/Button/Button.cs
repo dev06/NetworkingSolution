@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 public class Button : ButtonEventHandler {
 
 	void Start ()
@@ -17,9 +18,8 @@ public class Button : ButtonEventHandler {
 		base.OnPointerClick(data);
 		if (buttonID == ButtonID.SEND)
 		{
-			//SEND MESSAGE
-			NetworkMessageSender.Send("Hello!");
-			Debug.Log("Message Sent!");
+			string message = GameObject.FindWithTag("UI/MessageInput").transform.FindChild("Text").GetComponent<Text>().text;
+			NetworkMessageSender.Send(message);
 		}
 	}
 }

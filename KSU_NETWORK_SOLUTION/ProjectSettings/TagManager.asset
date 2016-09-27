@@ -11,6 +11,11 @@ TagManager:
   - NetworkManager
   - NetworkManager/NetworkConnectionManager
   - UI/GameCanvas
+  - UI/MessageInput
+  - Controller/GameSceneController
+  - Info/Status
+  - Info/IP
+  - Info/TextMessage
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 public class ConnectionButton : ButtonEventHandler {
 
 
@@ -15,11 +16,15 @@ public class ConnectionButton : ButtonEventHandler {
 		if (buttonID == ButtonID.HOST)
 		{
 			gameController.networkConnectionManager.StartGameServer();
+			gameController.overridenNetworkDiscovery.StartGameServer();
+
 		}
 
 		if (buttonID == ButtonID.JOIN)
 		{
-			gameController.networkConnectionManager.ConnectClientToServer();
+
+			gameController.overridenNetworkDiscovery.StartGameClient();
+			//gameController.networkConnectionManager.ConnectClientToServer("");
 		}
 	}
 }
