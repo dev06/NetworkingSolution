@@ -523,54 +523,54 @@
 			"file": "Assets/Scripts/Network/NetworkConnectionManager.cs",
 			"settings":
 			{
-				"buffer_size": 3401,
+				"buffer_size": 2063,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/Scripts/UI/Button/ConnectionButton.cs",
 			"settings":
 			{
-				"buffer_size": 628,
+				"buffer_size": 556,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/Scripts/Network/OverridenNetworkDiscovery.cs",
 			"settings":
 			{
-				"buffer_size": 1073,
+				"buffer_size": 1217,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/Scripts/GameScene/GameSceneController.cs",
 			"settings":
 			{
-				"buffer_size": 814,
+				"buffer_size": 1309,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/Scripts/Network/NetworkMessageReceiver.cs",
 			"settings":
 			{
-				"buffer_size": 1843,
+				"buffer_size": 1959,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Assets/Scripts/GameController.cs",
 			"settings":
 			{
-				"buffer_size": 628,
+				"buffer_size": 629,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -946,15 +946,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3401,
+						"buffer_size": 2063,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2938,
-								2938
+								0,
+								0
 							]
 						],
 						"settings":
@@ -976,15 +976,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 628,
+						"buffer_size": 556,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								181,
-								181
+								445,
+								445
 							]
 						],
 						"settings":
@@ -1006,15 +1006,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1073,
+						"buffer_size": 1217,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								831,
-								810
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1036,15 +1036,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 814,
+						"buffer_size": 1309,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								600,
-								600
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1066,15 +1066,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1843,
+						"buffer_size": 1959,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1026,
-								1026
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1096,15 +1096,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 628,
+						"buffer_size": 629,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								622,
-								622
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1706,7 +1706,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Devan\\Documents\\UnityProjects\\CSE_GAME1\\CSE_SUBLIME.sublime-project"
+				"C:\\Users\\Devan\\Documents\\UnityProjects\\AndroidGame\\Android_SUBLIME.sublime-project"
 			],
 			[
 				"android",
