@@ -4,8 +4,10 @@ using System.Collections;
 public class GameController : MonoBehaviour
 {
 	public static GameController Instance;
+	public static string TransitionScene = "DemoScene";
 
 	public NetworkConnectionManager networkConnectionManager;
+	public NetworkSpawnManager networkSpawnManager;
 	public OverridenNetworkDiscovery overridenNetworkDiscovery;
 
 	void Awake()
@@ -15,6 +17,7 @@ public class GameController : MonoBehaviour
 			Destroy(gameObject);
 		} else {
 			DontDestroyOnLoad(gameObject);
+			Instance = this;
 		}
 		Init();
 	}
@@ -23,6 +26,8 @@ public class GameController : MonoBehaviour
 	private void Init()
 	{
 		networkConnectionManager = GameObject.FindWithTag("NetworkManager/NetworkConnectionManager").GetComponent<NetworkConnectionManager>();
+		//networkSpawnManager = GameObject.FindWithTag("NetworkManager/NetworkSpawnManager").GetComponent<NetworkSpawnManager>();
+
 		overridenNetworkDiscovery = GetComponent<OverridenNetworkDiscovery>();
 	}
 }

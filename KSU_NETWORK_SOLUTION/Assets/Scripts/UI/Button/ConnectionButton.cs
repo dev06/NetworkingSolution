@@ -16,14 +16,13 @@ public class ConnectionButton : ButtonEventHandler {
 		if (buttonID == ButtonID.HOST)
 		{
 			gameController.networkConnectionManager.StartGameServer();
-			gameController.overridenNetworkDiscovery.StartGameServer();
+			//gameController.overridenNetworkDiscovery.StartGameServer();
 
 		}
 
 		if (buttonID == ButtonID.JOIN)
 		{
-
-			gameController.overridenNetworkDiscovery.StartGameClient();
+			gameController.networkConnectionManager.ConnectClientToServer("");
 		}
 	}
 }

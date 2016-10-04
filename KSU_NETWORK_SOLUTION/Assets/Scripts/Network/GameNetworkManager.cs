@@ -11,6 +11,7 @@ public class GameNetworkManager : MonoBehaviour {
 			Destroy(gameObject);
 		} else {
 			DontDestroyOnLoad(gameObject);
+			Instance = this;
 		}
 	}
 

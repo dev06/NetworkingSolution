@@ -17,6 +17,7 @@ TagManager:
   - Info/IP
   - Info/TextMessage
   - Info/Connections
+  - NetworkManager/NetworkSpawnManager
   layers:
   - Default
   - TransparentFX

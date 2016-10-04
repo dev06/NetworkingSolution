@@ -24,7 +24,7 @@ public class GameSceneController : MonoBehaviour {
 		}
 		else {
 			GameObject.FindWithTag("Info/Status").GetComponent<Text>().text = "Status : CLIENT ";
-			GameObject.FindWithTag("Info/IP").GetComponent<Text>().text = "Connected IP : " + NetworkConnectionManager.Client.serverIp;
+			//GameObject.FindWithTag("Info/IP").GetComponent<Text>().text = "Connected IP : " + NetworkConnectionManager.Client.serverIp;
 			GameObject.FindWithTag("Info/Connections").GetComponent<Text>().text = "Connections: " + NetworkConnectionManager.ActiveConnections;
 		}
 
