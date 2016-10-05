@@ -32,5 +32,11 @@ public class GameController : MonoBehaviour
 	}
 }
 
+public enum HostOption
+{
+	HOST_AND_PLAY,
+	HOST,
+}
+
 
 

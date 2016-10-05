@@ -13,7 +13,7 @@ public class NetworkConnectionManager : NetworkManager {
 	public static NetworkClient Client;
 	public static int ActiveConnections;
 	public static string HostIPAddress;
-
+	public HostOption hostOption;
 
 	private GameController _gameController;
 	private NetworkSpawnManager _networkSpawnManager;
@@ -22,19 +22,18 @@ public class NetworkConnectionManager : NetworkManager {
 	void Start()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-		//_networkSpawnManager = _gameController.networkSpawnManager;
 	}
 
 
 	public void StartGameServer()
 	{
-		// Debug.LogError("Server Started...");
 		SceneManager.LoadScene(GameController.TransitionScene);
 		StartMatchMaker();
 		CreateInternetMatch("TestMatch");
 		IsServer = true;
 		HostIPAddress = Network.player.ipAddress;
 	}
+
 
 
 
@@ -62,12 +61,17 @@ public class NetworkConnectionManager : NetworkManager {
 	{
 		if (matchResponse != null && matchResponse.success)
 		{
-			Debug.Log("Create match succeeded");
+			Debug.Log("Create match succeeded" + " " + hostOption);
 
 			MatchInfo hostInfo = new MatchInfo(matchResponse);
 			NetworkServer.Listen(hostInfo, 9000);
 
-			StartHost(hostInfo);
+			if (hostOption == HostOption.HOST_AND_PLAY)
+			{
+				StartHost(hostInfo);
+			} else if (hostOption == HostOption.HOST) {
+				StartServer(hostInfo);
+			}
 
 		}
 		else

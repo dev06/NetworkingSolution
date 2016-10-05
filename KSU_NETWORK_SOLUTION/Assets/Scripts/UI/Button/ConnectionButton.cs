@@ -15,10 +15,19 @@ public class ConnectionButton : ButtonEventHandler {
 		base.OnPointerClick(data);
 		if (buttonID == ButtonID.HOST)
 		{
+			gameController.networkConnectionManager.hostOption = HostOption.HOST;
 			gameController.networkConnectionManager.StartGameServer();
-			//gameController.overridenNetworkDiscovery.StartGameServer();
-
 		}
+
+		if (buttonID == ButtonID.HOST_AND_PLAY)
+		{
+			gameController.networkConnectionManager.hostOption = HostOption.HOST_AND_PLAY;
+			gameController.networkConnectionManager.StartGameServer();
+		}
+
+
+
+
 
 		if (buttonID == ButtonID.JOIN)
 		{
