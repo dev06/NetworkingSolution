@@ -563,8 +563,17 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts"
+	],
 	"file_history":
 	[
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ConnectionButton.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkConnectionManager.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Entity/Player.cs",
+		"/C/Users/Devan/Desktop/New Unity Project/Assets/sd.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkConnectionManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
@@ -687,12 +696,7 @@
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/ControllerProfileButton.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/PlayerController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Bot.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/LargeProjectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/SmallProjectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/BotArm.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Temp/Compiled-Standard.shader",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/CameraController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Health.cs"
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/LargeProjectile.cs"
 	],
 	"find":
 	{
@@ -945,6 +949,18 @@
 		"selected_items":
 		[
 			[
+				"connec",
+				"UI\\Button\\ConnectionButton.cs"
+			],
+			[
+				"conc",
+				"GameController.cs"
+			],
+			[
+				"networkcon",
+				"Network\\NetworkConnectionManager.cs"
+			],
+			[
 				"game",
 				"GameController.cs"
 			],
@@ -1039,10 +1055,6 @@
 			[
 				"inventoryman",
 				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\InventoryManager.cs"
-			],
-			[
-				"networkcon",
-				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkConnectionManager.cs"
 			],
 			[
 				"networkme",
@@ -1447,14 +1459,6 @@
 			[
 				"slidesho",
 				"Slideshow\\SlideshowController.cs"
-			],
-			[
-				"videoplayer",
-				"ControlScene\\VideoPlayer.cs"
-			],
-			[
-				"slideshowc",
-				"Slideshow\\SlideshowController.cs"
 			]
 		],
 		"width": 0.0
@@ -1467,7 +1471,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Devan\\Documents\\UnityProjects\\CSE_GAME1\\CSE_SUBLIME.sublime-workspace"
+				"E:\\Unity\\Projects\\AndroidGame\\AndroidSublime.sublime-project"
 			]
 		],
 		"width": 475.0
@@ -1508,8 +1512,8 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 271.0,
+	"side_bar_visible": true,
+	"side_bar_width": 169.0,
 	"status_bar_visible": false,
 	"template_settings":
 	{
