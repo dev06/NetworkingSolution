@@ -50,7 +50,7 @@ public class NetworkConnectionManager : NetworkManager {
 	{
 		CreateMatchRequest create = new CreateMatchRequest();
 		create.name = matchName;
-		create.size = 4;
+		create.size = 5;
 		create.advertise = true;
 		create.password = "";
 
@@ -76,10 +76,6 @@ public class NetworkConnectionManager : NetworkManager {
 		}
 	}
 
-	// // private IEnumerator Spawn()
-	// // {
-	// // 	yield return new WaitForSeconds(1.0f);
-	// // }
 
 	public void FindInternetMatch(string matchName)
 	{
@@ -108,7 +104,6 @@ public class NetworkConnectionManager : NetworkManager {
 		}
 	}
 
-	// //this method is called when your request to join a match is returned
 	private void OnJoinInternetMatch(JoinMatchResponse matchJoin)
 	{
 		if (matchJoin.success)
@@ -132,21 +127,6 @@ public class NetworkConnectionManager : NetworkManager {
 
 
 	}
-
-	public override void OnServerDisconnect(NetworkConnection conn)
-	{
-		base.OnServerConnect (conn);
-	}
-
-	public override void OnClientConnect(NetworkConnection conn)
-	{
-		IsClientConnected = true;
-
-		ActiveConnections = numPlayers;
-		IsConnecting = false;
-	}
-
-
 
 	public override void OnClientDisconnect(NetworkConnection conn)
 	{
