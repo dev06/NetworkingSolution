@@ -18,6 +18,7 @@ TagManager:
   - Info/TextMessage
   - Info/Connections
   - NetworkManager/NetworkSpawnManager
+  - Handler/MessageHandler
   layers:
   - Default
   - TransparentFX

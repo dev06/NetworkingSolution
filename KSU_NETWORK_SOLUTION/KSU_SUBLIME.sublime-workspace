@@ -563,10 +563,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts"
-	],
 	"file_history":
 	[
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
@@ -890,7 +886,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 52.0
 	},
 	"input":
 	{
@@ -939,7 +935,7 @@
 	"project": "KSU_SUBLIME.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 100.0
 	},
 	"save_all_on_build": true,
 	"select_file":

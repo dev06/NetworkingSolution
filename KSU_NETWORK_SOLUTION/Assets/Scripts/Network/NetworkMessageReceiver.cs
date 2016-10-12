@@ -35,19 +35,29 @@ public class NetworkMessageReceiver : NetworkManager {
 	private void ReceiveIntMessage(NetworkMessage netMsg)
 	{
 		var msg = netMsg.ReadMessage <IntMessage>();
+		if (GameController.TransitionScene == "GameScene")
+		{
+
+		}
 		GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
 	}
 
 	private void ReceiveFloatMessage(NetworkMessage netMsg)
 	{
 		var msg = netMsg.ReadMessage <FloatMessage>();
-		GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
+		if (GameController.TransitionScene == "GameScene")
+		{
+			GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
+		}
 	}
 
 	private void ReceiveStringMessage(NetworkMessage netMsg)
 	{
 		var msg = netMsg.ReadMessage <StringMessage>();
-		GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
+		if (GameController.TransitionScene == "GameScene")
+		{
+			GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
+		}
 		if (NetworkConnectionManager.IsServer)
 		{
 			NetworkMessageSender.Send(msg.value, netMsg.conn.connectionId);
@@ -57,12 +67,17 @@ public class NetworkMessageReceiver : NetworkManager {
 	private void ReceiveBoolMessage(NetworkMessage netMsg)
 	{
 		var msg = netMsg.ReadMessage <BoolMessage>();
-		GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
+		if (GameController.TransitionScene == "GameScene")
+		{
+			GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
+		}
 	}
 
 	private void ReceiveVector3Message(NetworkMessage netMsg)
 	{
 		var msg = netMsg.ReadMessage <Vector3Message>();
+		GameObject.Find("TestCube(Clone)").transform.localScale = msg.value;
+
 	}
 
 }

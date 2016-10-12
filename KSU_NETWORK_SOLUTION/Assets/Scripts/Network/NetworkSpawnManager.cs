@@ -16,14 +16,15 @@ public class NetworkSpawnManager : MonoBehaviour {
 
 	public void StartSpawnManager()
 	{
-		Debug.Log(_networkConnectionManager.netInstanceID);
+		Debug.LogError(_networkConnectionManager.netInstanceID);
 		if (_networkConnectionManager.netInstanceID == NetInstanceID.SERVER_CLIENT)
 		{
+
 			Debug.Log("Spawn Manager Started");
-			//NetworkServer.Spawn(Instantiate((GameObject)Resources.Load("Prefabs/TestCube")));
+			StartCoroutine("SpawnObjectsOnServer");
 		} else
 		{
-			//	RegisterPrefab();
+			StartCoroutine("SpawnObjectsOnClient");
 		}
 	}
 
@@ -34,9 +35,24 @@ public class NetworkSpawnManager : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Q))
-		{
-			NetworkServer.Spawn(Instantiate((GameObject)Resources.Load("Prefabs/TestCube")));
-		}
+		// if (Input.GetKeyDown(KeyCode.Q))
+		// {
+		// 	GameObject go = (GameObject)Instantiate(Resources.Load("Prefabs/TestCube"), new Vector3(Random.Range(-3, 3), 2, Random.Range(-3, 3)), Quaternion.identity);
+		// 	NetworkServer.Spawn(go);
+		// }
 	}
+
+	private IEnumerator SpawnObjectsOnServer()
+	{
+		yield return new WaitForSeconds(1.0F);
+		NetworkServer.Spawn(Instantiate((GameObject)Resources.Load("Prefabs/TestCube")));
+
+	}
+	private IEnumerator SpawnObjectsOnClient()
+	{
+		yield return new WaitForSeconds(1.0F);
+		RegisterPrefab();
+
+	}
+
 }

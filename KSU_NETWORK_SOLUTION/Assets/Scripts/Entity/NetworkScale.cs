@@ -6,39 +6,25 @@ public class NetworkScale : NetworkBehaviour {
 	GameController _gameController;
 	NetworkConnectionManager _networkConnectionManager;
 
-	[SyncVar]
-	public Vector3 scale;
+	public string assetID;
 
-	[SerializeField] Transform myScale;
-	private void Start()
+	private Vector3 _lastScale;
+	void Start()
 	{
-		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-		_networkConnectionManager = _gameController.networkConnectionManager;
-		myScale = transform;
+		_lastScale = transform.localScale;
+		assetID = GetComponent<NetworkIdentity>().assetId + "";
 	}
 
-	void FixedUpdate()
+
+	void Update()
 	{
-		TransmitScale();
-		if (!isLocalPlayer)
+		if (NetworkConnectionManager.IsServer)
 		{
-			myScale.localScale = transform.localScale;
-		}
-	}
-
-	[Command]
-	void CmdProvideScaleToServer(Vector3 _scale)
-	{
-		scale = _scale;
-
-	}
-
-	[ClientCallback	]
-	void TransmitScale()
-	{
-		if (isLocalPlayer)
-		{
-			CmdProvideScaleToServer(myScale.localScale);
+			if (_lastScale != transform.localScale)
+			{
+				NetworkMessageSender.Send(transform.localScale, assetID);
+				_lastScale = transform.localScale;
+			}
 		}
 	}
 }

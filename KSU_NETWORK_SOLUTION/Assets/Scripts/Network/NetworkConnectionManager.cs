@@ -164,6 +164,7 @@ public class NetworkConnectionManager : NetworkManager {
 	{
 
 		_networkSpawnManager.StartSpawnManager();
+
 	}
 
 }

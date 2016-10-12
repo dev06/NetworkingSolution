@@ -18,6 +18,8 @@ public class NetworkMessageSender: NetworkManager
 		}
 	}
 
+
+
 	public static void Send(float floatValue)
 	{
 		FloatMessage msg = new FloatMessage();
@@ -31,6 +33,8 @@ public class NetworkMessageSender: NetworkManager
 		}
 	}
 
+
+
 	public static void Send(string stringValue)
 	{
 		StringMessage msg = new StringMessage();
@@ -42,9 +46,8 @@ public class NetworkMessageSender: NetworkManager
 		{
 			NetworkConnectionManager.Client.Send(MessageType.String_CHN, msg);
 		}
-
-		Debug.LogError("Message Sent");
 	}
+
 
 	public static void Send(bool boolValue)
 	{
@@ -70,6 +73,21 @@ public class NetworkMessageSender: NetworkManager
 		{
 			NetworkConnectionManager.Client.Send(MessageType.Vector3_CHN, msg);
 		}
+	}
+
+	public static void Send(Vector3 vector3Value, string stringValue)
+	{
+		Vector3Message msg = new Vector3Message();
+		msg.value = vector3Value;
+		if (NetworkConnectionManager.IsServer)
+		{
+			NetworkServer.SendToAll(MessageType.Vector3_CHN, msg);
+		} else
+		{
+			NetworkConnectionManager.Client.Send(MessageType.Vector3_CHN, msg);
+		}
+
+		Send(stringValue);
 	}
 
 	public static void Send(string stringValue, int execption)
