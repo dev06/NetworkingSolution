@@ -7,11 +7,12 @@ public class Player : NetworkBehaviour
 
 	private Vector3 _velocity;
 
+
 	public override void OnStartLocalPlayer()
 	{
 		base.OnStartLocalPlayer();
 		GameObject _camera = Instantiate((GameObject)Resources.Load("Prefabs/Main Camera"));
-
+		_camera.transform.position = transform.position - transform.forward * 20.0f + transform.up * 10.0f;
 		_camera.transform.parent = transform;
 		transform.GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0, 1);
 		// you can use this function to do things like create camera, audio listeners, etc.
@@ -25,6 +26,7 @@ public class Player : NetworkBehaviour
 		if (!base.isLocalPlayer) {
 			return;
 		}
+
 
 		// handle input here...
 

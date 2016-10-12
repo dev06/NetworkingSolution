@@ -26,7 +26,6 @@ public class GameController : MonoBehaviour
 	private void Init()
 	{
 		networkConnectionManager = GameObject.FindWithTag("NetworkManager/NetworkConnectionManager").GetComponent<NetworkConnectionManager>();
-		//networkSpawnManager = GameObject.FindWithTag("NetworkManager/NetworkSpawnManager").GetComponent<NetworkSpawnManager>();
 
 		overridenNetworkDiscovery = GetComponent<OverridenNetworkDiscovery>();
 	}
@@ -36,6 +35,13 @@ public enum HostOption
 {
 	HOST_AND_PLAY,
 	HOST,
+}
+
+public enum NetInstanceID
+{
+	SERVER,
+	SERVER_CLIENT,
+	CLIENT,
 }
 
 

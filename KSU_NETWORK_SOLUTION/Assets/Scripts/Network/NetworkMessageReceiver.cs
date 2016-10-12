@@ -18,6 +18,8 @@ public class NetworkMessageReceiver : NetworkManager {
 			NetworkConnectionManager.Client.RegisterHandler(MessageType.Float_CHN, ReceiveFloatMessage);
 			NetworkConnectionManager.Client.RegisterHandler(MessageType.String_CHN, ReceiveStringMessage);
 			NetworkConnectionManager.Client.RegisterHandler(MessageType.Bool_CHN, ReceiveBoolMessage);
+			NetworkConnectionManager.Client.RegisterHandler(MessageType.Vector3_CHN, ReceiveVector3Message);
+
 		}
 		else
 		{
@@ -25,6 +27,8 @@ public class NetworkMessageReceiver : NetworkManager {
 			NetworkServer.RegisterHandler(MessageType.Float_CHN, ReceiveFloatMessage);
 			NetworkServer.RegisterHandler(MessageType.String_CHN, ReceiveStringMessage);
 			NetworkServer.RegisterHandler(MessageType.Bool_CHN, ReceiveBoolMessage);
+			NetworkServer.RegisterHandler(MessageType.Vector3_CHN, ReceiveVector3Message);
+
 		}
 	}
 
@@ -54,6 +58,11 @@ public class NetworkMessageReceiver : NetworkManager {
 	{
 		var msg = netMsg.ReadMessage <BoolMessage>();
 		GameObject.FindGameObjectWithTag("Info/TextMessage").GetComponent<Text>().text = "" + msg.value;
+	}
+
+	private void ReceiveVector3Message(NetworkMessage netMsg)
+	{
+		var msg = netMsg.ReadMessage <Vector3Message>();
 	}
 
 }

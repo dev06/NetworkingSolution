@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"Seri",
+				"SerializeField"
+			],
+			[
+				"MOno",
+				"MonoBehaviour"
+			],
+			[
+				"Net",
+				"NetInstanceID"
+			],
+			[
+				"Host",
+				"HostOption.HOST_AND_PLAY"
+			],
+			[
+				"host",
+				"hostOption"
+			],
+			[
 				"Res",
 				"Resources.Load(\"Prefabs"
 			],
@@ -494,26 +514,6 @@
 			[
 				"GetC",
 				"GetComponent"
-			],
-			[
-				"Part",
-				"ParticleSystem"
-			],
-			[
-				"gra",
-				"grad.colorKeys"
-			],
-			[
-				"MinMax",
-				"MinMaxGradient"
-			],
-			[
-				"_color",
-				"_colorOverLifeTime"
-			],
-			[
-				"Par",
-				"ParticleSystem"
 			]
 		]
 	},
@@ -565,29 +565,45 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts"
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts"
 	],
 	"file_history":
 	[
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Entity/NetworkScale.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/MenuButton.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageReceiver.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageSender.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/ButtonID.cs",
+		"/C/Users/Devan/Documents/Bumpv1.0/test/Assets/scale.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Entity/Player.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/system/GizmoController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/system/Gizmo.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/persistent/SessionManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/persistent/Logger.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/menu/SceneLoadEvent.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/menu/UIColor.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/menu/ButtonEvent.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/load/TransitionHandler.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/load/SceneLoader.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/network/NetworkMessage.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/KSU_VI_Research/ResearchWizard/Assets/scripts/network/NetworkConstants.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkConnectionManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkSpawnManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ConnectionButton.cs",
 		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
 		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ConnectionButton.cs",
 		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkConnectionManager.cs",
 		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Entity/Player.cs",
 		"/C/Users/Devan/Desktop/New Unity Project/Assets/sd.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkConnectionManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/OverridenNetworkDiscovery.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ConnectionButton.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/nm.cs",
 		"/E/ProgramProcess.cs",
 		"/E/VideoPlayer.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ButtonEventHandler.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/GameNetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingExample/Assets/networkmanager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageReceiver.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageSender.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkSpawnManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingExample/Assets/Player.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameScene/GameSceneController.cs",
 		"/C/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll",
@@ -668,7 +684,6 @@
 		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/StartScene/StartSceneManager.cs",
 		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/Network/ClientNetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Library/metadata/bd/bd70d448b18cfbc46af26466f752332c",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/ButtonID.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/ButtonEventHandler.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ClientNetworkManager.cs",
@@ -679,24 +694,9 @@
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/README.md",
 		"/C/Users/Devan/Documents/Gov/chapter1.txt",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/MenuButton.cs",
 		"/C/Users/Devan/Downloads/Textbook (1).pdf",
 		"/C/Users/Devan/Documents/UnityProjects/test/Assets/A.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/RetryButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/ParticleManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/LaserParticleManager.cs",
-		"/C/Users/Devan/Downloads/Textbook.pdf",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Particles/Effect.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ControllerConfiguration.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ButtonEventHandler.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Mob.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Projectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/CustomRotationButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/CustomKeyButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/ControllerProfileButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/PlayerController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Bot.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/LargeProjectile.cs"
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/RetryButton.cs"
 	],
 	"find":
 	{
@@ -890,7 +890,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -949,19 +949,71 @@
 		"selected_items":
 		[
 			[
-				"connec",
-				"UI\\Button\\ConnectionButton.cs"
+				"button",
+				"ButtonID.cs"
 			],
 			[
-				"conc",
+				"networkmes",
+				"Network\\NetworkMessageSender.cs"
+			],
+			[
+				"networkmesser",
+				"Network\\NetworkMessageReceiver.cs"
+			],
+			[
+				"gamecon",
 				"GameController.cs"
+			],
+			[
+				"networkmess",
+				"Network\\NetworkMessageSender.cs"
+			],
+			[
+				"player",
+				"Entity\\Player.cs"
+			],
+			[
+				"netw",
+				"Entity\\NetworkScale.cs"
+			],
+			[
+				"spawn",
+				"Network\\NetworkSpawnManager.cs"
+			],
+			[
+				"netowo",
+				"Network\\NetworkConnectionManager.cs"
+			],
+			[
+				"ga",
+				"GameController.cs"
+			],
+			[
+				"game",
+				"GameController.cs"
+			],
+			[
+				"netwocon",
+				"Network\\NetworkConnectionManager.cs"
+			],
+			[
+				"networksp",
+				"Network\\NetworkSpawnManager.cs"
 			],
 			[
 				"networkcon",
 				"Network\\NetworkConnectionManager.cs"
 			],
 			[
-				"game",
+				"but",
+				"ButtonID.cs"
+			],
+			[
+				"connec",
+				"UI\\Button\\ConnectionButton.cs"
+			],
+			[
+				"conc",
 				"GameController.cs"
 			],
 			[
@@ -993,10 +1045,6 @@
 				"Network\\NetworkMessageReceiver.cs"
 			],
 			[
-				"networkmes",
-				"Network\\NetworkMessageReceiver.cs"
-			],
-			[
 				"gamesce",
 				"GameScene\\GameSceneController.cs"
 			],
@@ -1009,20 +1057,12 @@
 				"Constants.cs"
 			],
 			[
-				"player",
-				"Entity\\Player.cs"
-			],
-			[
 				"event",
 				"Event\\EventManager.cs"
 			],
 			[
 				"gameinput",
 				"Input\\GameInput.cs"
-			],
-			[
-				"gamecon",
-				"CSE_GAME1\\Assets\\Scripts\\GameController.cs"
 			],
 			[
 				"messge",
@@ -1059,10 +1099,6 @@
 			[
 				"networkme",
 				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkMessageReceiver.cs"
-			],
-			[
-				"button",
-				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\UI\\Button\\Button.cs"
 			],
 			[
 				"netowkr",
@@ -1125,10 +1161,6 @@
 				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\UI\\Button\\Button.cs"
 			],
 			[
-				"networkmess",
-				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkMessageSender.cs"
-			],
-			[
 				"gamescenecontroller",
 				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\GameScene\\GameSceneController.cs"
 			],
@@ -1155,10 +1187,6 @@
 			[
 				"controllerp",
 				"UI\\Button\\ControllerProfileButton.cs"
-			],
-			[
-				"but",
-				"UI\\ButtonEventHandler.cs"
 			],
 			[
 				"mob",
@@ -1431,34 +1459,6 @@
 			[
 				"speech",
 				"ClientScene\\SpeechController.cs"
-			],
-			[
-				"servernetwo",
-				"Network\\ServerNetworkManager.cs"
-			],
-			[
-				"constants",
-				"Constants.cs"
-			],
-			[
-				"serverplay",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"session",
-				"SessionManager.cs"
-			],
-			[
-				"serverplayerc",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"masterme",
-				"Network\\MasterMessageType.cs"
-			],
-			[
-				"slidesho",
-				"Slideshow\\SlideshowController.cs"
 			]
 		],
 		"width": 0.0
@@ -1512,7 +1512,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 169.0,
 	"status_bar_visible": false,
 	"template_settings":

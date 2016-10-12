@@ -59,6 +59,19 @@ public class NetworkMessageSender: NetworkManager
 		}
 	}
 
+	public static void Send(Vector3 vector3Value)
+	{
+		Vector3Message msg = new Vector3Message();
+		msg.value = vector3Value;
+		if (NetworkConnectionManager.IsServer)
+		{
+			NetworkServer.SendToAll(MessageType.Vector3_CHN, msg);
+		} else
+		{
+			NetworkConnectionManager.Client.Send(MessageType.Vector3_CHN, msg);
+		}
+	}
+
 	public static void Send(string stringValue, int execption)
 	{
 		StringMessage msg = new StringMessage();
@@ -81,6 +94,7 @@ public class IntMessage: MessageBase {public int value; }
 public class FloatMessage: MessageBase {public float value; }
 public class StringMessage: MessageBase {public string value; }
 public class BoolMessage: MessageBase {public bool value; }
+public class Vector3Message: MessageBase {public Vector3 value; }
 
 public class MessageType
 {
@@ -88,4 +102,6 @@ public class MessageType
 	public const short Float_CHN = 1001;
 	public const short Bool_CHN = 1002;
 	public const short String_CHN = 1003;
+	public const short Vector3_CHN = 1004;
+
 }

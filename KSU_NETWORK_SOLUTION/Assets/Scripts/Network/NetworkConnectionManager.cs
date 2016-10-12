@@ -14,6 +14,7 @@ public class NetworkConnectionManager : NetworkManager {
 	public static int ActiveConnections;
 	public static string HostIPAddress;
 	public HostOption hostOption;
+	public NetInstanceID netInstanceID;
 
 	private GameController _gameController;
 	private NetworkSpawnManager _networkSpawnManager;
@@ -22,6 +23,7 @@ public class NetworkConnectionManager : NetworkManager {
 	void Start()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+		_networkSpawnManager = GameObject.FindWithTag("NetworkManager/NetworkSpawnManager").GetComponent<NetworkSpawnManager>();;
 	}
 
 
@@ -33,7 +35,6 @@ public class NetworkConnectionManager : NetworkManager {
 		IsServer = true;
 		HostIPAddress = Network.player.ipAddress;
 	}
-
 
 
 
@@ -72,6 +73,8 @@ public class NetworkConnectionManager : NetworkManager {
 			} else if (hostOption == HostOption.HOST) {
 				StartServer(hostInfo);
 			}
+
+			Debug.Log("Instance started as -> " + netInstanceID);
 
 		}
 		else
@@ -154,6 +157,13 @@ public class NetworkConnectionManager : NetworkManager {
 
 		return ActiveConnections = _connections;
 
+	}
+
+
+	void OnLevelWasLoaded()
+	{
+
+		_networkSpawnManager.StartSpawnManager();
 	}
 
 }
