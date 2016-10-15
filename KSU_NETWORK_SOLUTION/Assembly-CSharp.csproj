@@ -46,16 +46,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonID.cs" />
-     <Compile Include="Assets\Scripts\Entity\NetworkScale.cs" />
      <Compile Include="Assets\Scripts\Entity\Player.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\GameScene\GameSceneController.cs" />
+     <Compile Include="Assets\Scripts\Misc\Constants\AppResources.cs" />
+     <Compile Include="Assets\Scripts\Misc\Event\EventManager.cs" />
      <Compile Include="Assets\Scripts\Network\GameNetworkManager.cs" />
      <Compile Include="Assets\Scripts\Network\MessageHandler.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkConnectionManager.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkMessageReceiver.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkMessageSender.cs" />
+     <Compile Include="Assets\Scripts\Network\NetworkObjectIdentifier.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkSpawnManager.cs" />
+     <Compile Include="Assets\Scripts\Network\NetworkTransform.cs" />
      <Compile Include="Assets\Scripts\Network\OverridenNetworkDiscovery.cs" />
      <Compile Include="Assets\Scripts\UI\Button\Button.cs" />
      <Compile Include="Assets\Scripts\UI\Button\ButtonEventHandler.cs" />

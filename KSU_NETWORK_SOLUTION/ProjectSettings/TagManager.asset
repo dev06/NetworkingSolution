@@ -19,6 +19,7 @@ TagManager:
   - Info/Connections
   - NetworkManager/NetworkSpawnManager
   - Handler/MessageHandler
+  - Object/TestCube
   layers:
   - Default
   - TransparentFX

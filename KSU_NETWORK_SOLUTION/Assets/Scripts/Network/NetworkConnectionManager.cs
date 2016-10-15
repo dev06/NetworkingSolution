@@ -6,7 +6,9 @@ using UnityEngine.Networking.Match;
 using UnityEngine.Networking.Types;
 public class NetworkConnectionManager : NetworkManager {
 
+	public static float MessageSendRate = 10;  // send every x framerate
 
+	public static bool IsLocalPlayer;
 	public static bool IsServer;
 	public static bool IsClientConnected;
 	public static bool IsConnecting;
@@ -19,6 +21,10 @@ public class NetworkConnectionManager : NetworkManager {
 	private GameController _gameController;
 	private NetworkSpawnManager _networkSpawnManager;
 
+	void OnEnable()
+	{
+		EventManager.OnClientConnect += ClientConnected;
+	}
 
 	void Start()
 	{
@@ -45,6 +51,13 @@ public class NetworkConnectionManager : NetworkManager {
 		FindInternetMatch("TestMatch");
 		Debug.LogError("Client is now connecting...");
 	}
+
+	public void ClientConnected()
+	{
+
+	}
+
+
 
 	public void CreateInternetMatch(string matchName)
 	{
@@ -121,6 +134,7 @@ public class NetworkConnectionManager : NetworkManager {
 			StartClient(hostInfo);
 			Client = client;
 
+
 		}
 		else
 		{
@@ -131,8 +145,24 @@ public class NetworkConnectionManager : NetworkManager {
 	public override void OnServerConnect(NetworkConnection conn)
 	{
 		base.OnServerConnect (conn);
+		if (EventManager.OnClientConnect != null)
+		{
+			EventManager.OnClientConnect();
+			StartCoroutine("UpdateClient", conn);
+		}
+	}
 
-
+	private IEnumerator UpdateClient(NetworkConnection conn)
+	{
+		yield return new WaitForSeconds(.1f);
+		GameObject[] objects = GameObject.FindGameObjectsWithTag("Object/TestCube");
+		for (int i = 0; i < objects.Length; i++)
+		{
+			if (objects[i] != null)
+			{
+				objects[i].GetComponent<NetworkObjectIdentifier>().SendTransform(false, conn.connectionId);
+			}
+		}
 	}
 
 	public override void OnClientDisconnect(NetworkConnection conn)
@@ -165,6 +195,11 @@ public class NetworkConnectionManager : NetworkManager {
 
 		_networkSpawnManager.StartSpawnManager();
 
+	}
+
+	void OnDisable()
+	{
+		EventManager.OnClientConnect -= ClientConnected;
 	}
 
 }

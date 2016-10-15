@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 	public NetworkConnectionManager networkConnectionManager;
 	public NetworkSpawnManager networkSpawnManager;
 	public OverridenNetworkDiscovery overridenNetworkDiscovery;
-	public MessageHandler messagleHandler;
+	public MessageHandler messageHandler;
 
 	void Awake()
 	{
@@ -23,11 +23,22 @@ public class GameController : MonoBehaviour
 		Init();
 	}
 
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			if (NetworkConnectionManager.IsServer)
+			{
+				NetworkSpawnManager.Spawn(AppResources.TestCube, Vector3.right * Random.Range(-10f, 10f) + Vector3.forward * Random.Range(-10f, 10f), Quaternion.identity);
+			}
+		}
+	}
+
 
 	private void Init()
 	{
 		networkConnectionManager = GameObject.FindWithTag("NetworkManager/NetworkConnectionManager").GetComponent<NetworkConnectionManager>();
-		messagleHandler = GameObject.FindWithTag("Handler/MessageHandler").GetComponent<MessageHandler>();
+		messageHandler = GameObject.FindWithTag("Handler/MessageHandler").GetComponent<MessageHandler>();
 		overridenNetworkDiscovery = GetComponent<OverridenNetworkDiscovery>();
 	}
 }

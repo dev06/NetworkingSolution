@@ -24,6 +24,7 @@ public class Player : NetworkBehaviour
 		// isLocalPlayer is true for the client who "owns" the player object
 		// we only want input handling for our player
 		if (!base.isLocalPlayer) {
+			NetworkConnectionManager.IsLocalPlayer = base.isLocalPlayer;
 			return;
 		}
 

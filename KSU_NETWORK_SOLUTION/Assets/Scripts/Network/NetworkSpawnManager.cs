@@ -3,56 +3,66 @@ using System.Collections;
 using UnityEngine.Networking;
 public class NetworkSpawnManager : MonoBehaviour {
 
-	// Use this for initialization\
-	private GameController _gameController;
 	private NetworkConnectionManager _networkConnectionManager;
+
 	void Start ()
 	{
-		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-		_networkConnectionManager = _gameController.networkConnectionManager;
+		_networkConnectionManager = GameController.Instance.networkConnectionManager;
 	}
 
-
-
+	/// <summary>
+	/// Start the spawn Manager
+	/// </summary>
 	public void StartSpawnManager()
 	{
-		Debug.LogError(_networkConnectionManager.netInstanceID);
-		if (_networkConnectionManager.netInstanceID == NetInstanceID.SERVER_CLIENT)
+		if (_networkConnectionManager.netInstanceID == NetInstanceID.CLIENT)
 		{
-
-			Debug.Log("Spawn Manager Started");
-			StartCoroutine("SpawnObjectsOnServer");
-		} else
+			StartCoroutine("InitClientSpawnManager");
+		}
+		else
 		{
-			StartCoroutine("SpawnObjectsOnClient");
+			StartCoroutine("InitServerSpawnManager");
 		}
 	}
 
-	public void RegisterPrefab()
+	/// <summary>
+	/// Registers a given prefab
+	/// </summary>
+	/// <param name="_object"></param>
+	public void RegisterPrefab(GameObject _object)
 	{
-		ClientScene.RegisterPrefab(Instantiate((GameObject)Resources.Load("Prefabs/TestCube")));
+		ClientScene.RegisterPrefab(_object);
 	}
 
-	void Update()
-	{
-		// if (Input.GetKeyDown(KeyCode.Q))
-		// {
-		// 	GameObject go = (GameObject)Instantiate(Resources.Load("Prefabs/TestCube"), new Vector3(Random.Range(-3, 3), 2, Random.Range(-3, 3)), Quaternion.identity);
-		// 	NetworkServer.Spawn(go);
-		// }
-	}
-
-	private IEnumerator SpawnObjectsOnServer()
+	/// <summary>
+	/// Inits the Server Spawn Manager
+	/// </summary>
+	private IEnumerator InitServerSpawnManager()
 	{
 		yield return new WaitForSeconds(1.0F);
-		NetworkServer.Spawn(Instantiate((GameObject)Resources.Load("Prefabs/TestCube")));
-
 	}
-	private IEnumerator SpawnObjectsOnClient()
+	/// <summary>
+	/// Inits the Client Spawn Manager
+	/// </summary>
+
+	private IEnumerator InitClientSpawnManager()
 	{
 		yield return new WaitForSeconds(1.0F);
-		RegisterPrefab();
-
+		RegisterPrefab((GameObject)Resources.Load("Prefabs/TestCube"));
 	}
+
+	public static void Spawn(GameObject _object, Vector3 _position, Quaternion _rotation)
+	{
+		GameObject _go = (GameObject)Instantiate(_object, _position, _rotation);
+		NetworkServer.Spawn(_go);
+	}
+
+	public static void Spawn(GameObject _object, Vector3 _position, Quaternion _rotation, Vector3 _scale)
+	{
+		GameObject _go = (GameObject)Instantiate(_object, _position, _rotation);
+		_go.transform.localScale = _scale;
+		NetworkServer.Spawn(_go);
+	}
+
 
 }

@@ -12,11 +12,11 @@ GameObject:
   - 65: {fileID: 6548740}
   - 23: {fileID: 2305510}
   - 114: {fileID: 11406994}
-  - 114: {fileID: 11444900}
-  - 114: {fileID: 11486364}
+  - 114: {fileID: 11471808}
+  - 114: {fileID: 11477312}
   m_Layer: 0
   m_Name: TestCube
-  m_TagString: Untagged
+  m_TagString: Object/TestCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.5, y: 8.58, z: 8.973122}
+  m_LocalPosition: {x: -11.947533, y: 7.51, z: 13.540092}
   m_LocalScale: {x: 10.15, y: 19.96, z: 4.51}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -44,7 +44,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f456ec169a9cbd54a9770305d20f0f9f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
     i15: 209
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
---- !u!114 &11444900
+--- !u!114 &11471808
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -119,19 +119,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 118954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
+  m_Script: {fileID: 11500000, guid: e64353076a1dc0b43a6e6c8d7ac890f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 1
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
---- !u!114 &11486364
+--- !u!114 &11477312
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -139,10 +130,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 118954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b13b6027374cb340990da715e0c711a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d74d0afbebddd84cadf5aecbd673f35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assetID: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

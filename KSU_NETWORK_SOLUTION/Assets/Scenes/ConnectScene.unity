@@ -540,7 +540,7 @@ MonoBehaviour:
   networkConnectionManager: {fileID: 0}
   networkSpawnManager: {fileID: 0}
   overridenNetworkDiscovery: {fileID: 0}
-  messagleHandler: {fileID: 0}
+  messageHandler: {fileID: 0}
 --- !u!1 &961750006
 GameObject:
   m_ObjectHideFlags: 0

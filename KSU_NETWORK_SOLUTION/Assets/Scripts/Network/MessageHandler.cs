@@ -6,14 +6,29 @@ using System.Collections;
 public class MessageHandler : MonoBehaviour {
 
 
-	public enum TaskID
-	{
-		Manage_Transform,
-	}
 	private GameController _gameController;
+
 
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 	}
+
+
+
+
+
+
+
+}
+
+
+/// <summary>
+/// Task IDs allows the Network message receiver to know which values to change.
+/// </summary>
+public enum TaskID
+{
+	Position,
+	Rotation,
+	Scale,
 }
